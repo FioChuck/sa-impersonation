@@ -36,6 +36,7 @@ FILTER = 'AND timestamp>=' + '\"' + time_minus_4h + '\"'
 
 print("Listing entries for logger {}:".format(logger.name))
 
+#  iterate through iterable logger
 for entry in logger.list_entries():
     timestamp = entry.timestamp.isoformat()
     print("* {}: {}".format(timestamp, entry.payload))
